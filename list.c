@@ -54,3 +54,44 @@ int addToList(list* ll, char* item){
     // If adding to list successeds than return 0
     return 0;
 }
+
+char* removeFromList(list* ll){
+    // Checking if head is already null, if it is just return null!
+    if(ll -> head == NULL){
+        return NULL;
+    }
+    // Temp node set to the head of the linked list 
+    node* temp = ll -> head;
+    // Setting the ll head to the ll head of next
+    ll -> head = ll -> head -> next;
+    // Setting item to temps item
+    char* item = temp -> item;
+    // Freeing memory
+    free(temp);
+    // Returning the item from temp
+    return item;
+}
+
+void printList(list* ll){
+    node* current = ll -> head;
+    // While current is not NULL, print the current item
+    // then go to the next node and repeat
+    while(current != NULL){
+        printf("%s\n", current -> item);
+        current = current -> next;
+    }
+}
+
+void flushList(list* ll){
+    // While head is not NULL, remove item and free space
+    while(ll -> head != NULL){
+        char* item = removeFromList(ll);
+        free(item);
+    }
+}
+
+void freeList(list* ll){
+    // Flush entire list and free memory from entire list
+    flushList(ll);
+    free(ll);
+}
