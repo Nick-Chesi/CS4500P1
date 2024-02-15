@@ -1,6 +1,8 @@
 #ifndef LIST_H
 #define LIST_H
 
+#include <stdio.h>
+
 typedef struct Node node;
 
 struct Node {
