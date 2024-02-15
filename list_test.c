@@ -49,23 +49,25 @@ int main(){
 
         // Freeing the list
         freeList(testList);
-        printList(testList);
+
+        // Recreating the list
+        testList = createList();
 
         // Adding back to the list to check integrity of memory!
         if (addToList(testList, "TEST 1!") != 0){
-                printListError(0);
-        }
+        printListError(0);
+    }
 
-        if (addToList(testList, "TEST 2!") != 0){
-                printListError(0);
-        }
+    if (addToList(testList, "TEST 2!") != 0){
+        printListError(0);
+    }
 
         printf("ADDED BACK AFTER FLUSH");
         printList(testList);
 
         // Free the new listt
         freeList(testList);
-
+        printf("TEST HAS COMPLETED!\n");
         return 0;
 }
 
