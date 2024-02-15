@@ -29,7 +29,7 @@ int main(){
         }
 
         // Printing the list out!
-        printf("+++TEST LIST PRINT+++");
+        printf("+++TEST LIST PRINT+++\n");
         printList(testList);
 
         // Testing a removed Item form the list
