@@ -53,12 +53,12 @@ int main(){
 
         // Adding back to the list to check integrity of memory!
         if (addToList(testList, "TEST 1!") != 0){
-        printListError(0);
-    }
+                printListError(0);
+        }
 
-    if (addToList(testList, "TEST 2!") != 0){
-        printListError(0);
-    }
+        if (addToList(testList, "TEST 2!") != 0){
+                printListError(0);
+        }
 
         printf("ADDED BACK AFTER FLUSH");
         printList(testList);
