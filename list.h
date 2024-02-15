@@ -6,12 +6,12 @@
 typedef struct Node node;
 
 struct Node {
-        char* item;
-        node* next;
+    char* item;
+    node* next;
 };
 
-typdef struct List {
-        node* head;
+typedef struct List {
+    node* head;
 } list;
 
 // Allocates space for a new list and sets its head to NULL
